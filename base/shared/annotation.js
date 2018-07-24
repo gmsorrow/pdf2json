@@ -333,6 +333,12 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
     data.fieldType = isName(fieldType) ? fieldType.name : '';
     data.fieldFlags = Util.getInheritableProperty(dict, 'Ff') || 0;
     this.fieldResources = Util.getInheritableProperty(dict, 'DR') || new Dict();
+    data.visible = this.isViewable();
+    data.required = [
+      2, 3, 4099, 131074, 131075,
+      393218, 393219, 917507, 917506,
+      49154, 49155, 16777219, 25165827
+    ].indexOf(Util.getInheritableProperty(dict, 'Ff')) > -1;
 
 //BEGIN:MQZ. Sep.19.2012. comment out the fullname routin, replace it with getInheritableProperty('T') //PDF Spec P.689
 
