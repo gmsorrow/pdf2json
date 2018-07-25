@@ -340,6 +340,15 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
       49154, 49155, 16777219, 25165827
     ].indexOf(Util.getInheritableProperty(dict, 'Ff')) > -1;
 
+    // for radiobuttons
+    if (
+      params.dict.map
+      && params.dict.map.AS
+      && params.dict.map.AS.name
+    ) {
+      data.radioChecked = params.dict.map.AS.name !== 'Off'
+    }
+
 //BEGIN:MQZ. Sep.19.2012. comment out the fullname routin, replace it with getInheritableProperty('T') //PDF Spec P.689
 
     // Building the full field name by collecting the field and
