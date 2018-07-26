@@ -319,7 +319,7 @@ var WidgetAnnotation = (function WidgetAnnotationClosure() {
       && params.dict.map.V
       && params.dict.map.V.name
     ) {
-      data.cbValue = params.dict.map.V.name;
+      data.cbChecked = params.dict.map.V.name !== 'Off';
     }
 
     data.fieldValue = stringToPDFString(
